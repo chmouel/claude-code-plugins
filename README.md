@@ -27,10 +27,16 @@ The plugin follows a structured 7-phase approach:
 
 ## Installation
 
-Install this plugin collection in Claude Code:
+Install this plugin collection from the shell:
 
 ```
-/extension add chmouel/claude-code-plugins
+claude plugin marketplace add chmouel/claude-code-plugins 
+```
+
+To install specific plugin, for example the Bug Hunter:
+
+```
+claude plugin install bug-hunter
 ```
 
 ## Plugin Structure
