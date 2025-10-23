@@ -1,0 +1,9 @@
+{
+  "name": "bug-hunter",
+  "version": "1.0.0",
+  "description": "A bug hunting workflow with specialized agents for codebase exploration, root cause analysis, and fix validation.",
+  "author": {
+    "name": "Sid Bidasaria",
+    "email": "sbidasaria@anthropic.com"
+  }
+}

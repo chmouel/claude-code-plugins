@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "chmouel-cc-plugins",
+  "version": "1.0.0",
+  "description": "Bundled plugins for Claude Code including Agent SDK development tools, PR review toolkit, and commit workflows",
+  "owner": {
+    "name": "Chmouel",
+    "email": "chmouel@users.github.com"
+  },
+  "plugins": [
+    {
+      "name": "bug-hunter",
+      "description": "Comprehensive bug hunter workflow with specialized agents for codebase exploration",
+      "version": "1.0.0",
+      "source": "./plugins/bug-hunter",
+      "category": "development"
+    }
+  ]
+}
