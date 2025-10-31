@@ -48,6 +48,67 @@ your-plugin/
 }
 ```
 
+### Repository Structure (For This Bundled Plugins Repository)
+
+**CRITICAL: ALL plugins in this repository MUST follow this structure:**
+
+```
+claude-code-plugins/
+├── .claude-plugin/
+│   └── marketplace.json       # Registry of ALL plugins
+├── plugins/                   # ALL plugins go here
+│   ├── bug-hunter/
+│   ├── deslop/
+│   ├── git-commit/
+│   └── weekly-review/         # ← CORRECT location
+└── weekly-review/             # ← WRONG! Never put plugins at root
+```
+
+**When creating a new plugin:**
+
+1. **Create plugin in `plugins/` directory:**
+   ```bash
+   mkdir -p plugins/your-plugin/.claude-plugin
+   mkdir -p plugins/your-plugin/commands
+   ```
+
+2. **Create plugin.json in the plugin directory:**
+   ```bash
+   # plugins/your-plugin/.claude-plugin/plugin.json
+   ```
+
+3. **Register in marketplace.json:**
+   ```json
+   {
+     "name": "your-plugin",
+     "description": "What it does",
+     "version": "1.0.0",
+     "source": "./plugins/your-plugin",  // ← MUST be ./plugins/your-plugin
+     "category": "development"
+   }
+   ```
+
+**DO NOT:**
+- ❌ Put plugins at repository root level
+- ❌ Forget to update marketplace.json
+- ❌ Use wrong source path in marketplace.json
+
+**Example of correct registration in marketplace.json:**
+```json
+{
+  "plugins": [
+    {
+      "name": "bug-hunter",
+      "source": "./plugins/bug-hunter"
+    },
+    {
+      "name": "weekly-review",
+      "source": "./plugins/weekly-review"
+    }
+  ]
+}
+```
+
 ---
 
 ## Design Principles

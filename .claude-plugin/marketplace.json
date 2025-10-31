@@ -28,6 +28,13 @@
       "version": "1.0.0",
       "source": "./plugins/git-commit",
       "category": "development"
+    },
+    {
+      "name": "weekly-review",
+      "description": "Generate a weekly summary of your git commits with insights on tech debt, bug fixes, and new features",
+      "version": "1.0.0",
+      "source": "./plugins/weekly-review",
+      "category": "development"
     }
   ]
 }

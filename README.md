@@ -67,6 +67,36 @@ Create thoughtful commit messages that focus on **why** changes were made, not j
 
 The plugin enhances Claude Code's native git workflow with structured review, better messaging, and safety gates. Perfect for maintaining clean, meaningful commit history.
 
+### Weekly Review
+
+Generate comprehensive weekly summaries of your work, automatically categorized by work type. **Prioritizes GitHub PRs** when available and falls back to git commits.
+
+**What it analyzes**:
+
+- Merged GitHub pull requests (preferred) or git commits from past 7-10 days
+- PR labels, titles, and descriptions for intelligent categorization
+- Automatic categorization into tech debt, bug fixes, and new features
+- Statistics on PRs merged, commits made, files changed, and lines modified
+
+**Usage**:
+
+```
+/weekly-review:weekly-review        # Review past 7 days
+/weekly-review:weekly-review 10     # Review past 10 days
+```
+
+The plugin generates a structured report with:
+
+- Summary of accomplishments (2-5 bullet points)
+- Work breakdown by category with percentages
+- Detailed analysis of tech debt, bug fixes, and new functionality
+- Links to merged PRs (GitHub mode) or commit timeline (git mode)
+
+**Features**:
+- Automatically detects GitHub CLI availability
+- Uses PR labels and descriptions for better categorization
+- Read-only operation - never modifies your code or git history
+
 ## Installation
 
 Install this plugin collection from the shell:
@@ -81,6 +111,7 @@ To install specific plugins:
 claude plugin install bug-hunter
 claude plugin install deslop
 claude plugin install git-commit
+claude plugin install weekly-review
 ```
 
 ## Plugin Structure

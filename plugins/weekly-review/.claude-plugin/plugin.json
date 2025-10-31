@@ -1,0 +1,9 @@
+{
+  "name": "weekly-review",
+  "version": "1.0.0",
+  "description": "Generate a weekly summary of your git commits with insights on tech debt, bug fixes, and new features",
+  "author": {
+    "name": "Claude Code Plugins",
+    "email": "plugins@example.com"
+  }
+}
