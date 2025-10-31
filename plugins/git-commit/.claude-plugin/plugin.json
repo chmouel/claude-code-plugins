@@ -1,0 +1,9 @@
+{
+  "name": "git-commit",
+  "version": "1.0.0",
+  "description": "Create well-formatted commit messages for your current work",
+  "author": {
+    "name": "Chmouel",
+    "email": "chmouel@chmouel.com"
+  }
+}

@@ -47,6 +47,26 @@ Remove AI-generated code "slop" from your branches using a systematic, safe, mul
 The command provides detailed file-by-file reports including risk assessment
 and asks for user confirmation before making any changes.
 
+### Git Commit
+
+Create thoughtful commit messages that focus on **why** changes were made, not just what changed.
+
+**What makes it different**:
+
+- Systematic file-by-file review to ensure commit coherence
+- Commit messages that explain **impact and reasoning** (the "why")
+- Conventional commits with proper Claude Code attribution
+- Parallel git operations for speed and efficiency
+- Smart push offers (only when NOT on main/master)
+
+**Usage**:
+
+```
+/git-commit:commit
+```
+
+The plugin enhances Claude Code's native git workflow with structured review, better messaging, and safety gates. Perfect for maintaining clean, meaningful commit history.
+
 ## Installation
 
 Install this plugin collection from the shell:
@@ -60,6 +80,7 @@ To install specific plugins:
 ```
 claude plugin install bug-hunter
 claude plugin install deslop
+claude plugin install git-commit
 ```
 
 ## Plugin Structure

@@ -21,6 +21,13 @@
       "version": "1.0.0",
       "source": "./plugins/deslop",
       "category": "development"
+    },
+    {
+      "name": "git-commit",
+      "description": "Create well-formatted commit messages with file review and optional push",
+      "version": "1.0.0",
+      "source": "./plugins/git-commit",
+      "category": "development"
     }
   ]
 }
