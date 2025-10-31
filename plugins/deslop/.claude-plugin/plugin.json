@@ -1,0 +1,9 @@
+{
+  "name": "deslop",
+  "version": "1.0.0",
+  "description": "Remove AI-generated code slop from your branches",
+  "author": {
+    "name": "Chmouel",
+    "email": "chmouel@chmouel.com"
+  }
+}

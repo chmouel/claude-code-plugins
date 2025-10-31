@@ -14,6 +14,13 @@
       "version": "1.0.0",
       "source": "./plugins/bug-hunter",
       "category": "development"
+    },
+    {
+      "name": "deslop",
+      "description": "Remove AI-generated code slop with multi-phase analysis, style learning, and safe confirmation workflow",
+      "version": "1.0.0",
+      "source": "./plugins/deslop",
+      "category": "development"
     }
   ]
 }

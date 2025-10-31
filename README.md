@@ -25,6 +25,28 @@ The plugin follows a structured 7-phase approach:
 6. Validation
 7. Summary
 
+### Deslop
+
+Remove AI-generated code "slop" from your branches using a systematic, safe, multi-phase approach.
+
+**What it detects and removes**:
+
+- Extra comments that are inconsistent with the codebase
+- Unnecessary defensive checks or try/catch blocks
+- Type casts to `any` used to bypass type issues
+- Over-verbose naming and unnecessary intermediate variables
+- Other AI-generated patterns that don't match your code style
+
+**Usage**:
+
+```
+/deslop:deslop              # Compare against main (default)
+/deslop:deslop develop      # Compare against develop branch
+```
+
+The command provides detailed file-by-file reports including risk assessment
+and asks for user confirmation before making any changes.
+
 ## Installation
 
 Install this plugin collection from the shell:
@@ -33,10 +55,11 @@ Install this plugin collection from the shell:
 claude plugin marketplace add chmouel/claude-code-plugins 
 ```
 
-To install specific plugin, for example the Bug Hunter:
+To install specific plugins:
 
 ```
 claude plugin install bug-hunter
+claude plugin install deslop
 ```
 
 ## Plugin Structure
@@ -46,6 +69,21 @@ Each plugin is located in the `plugins/` directory and includes:
 - `.claude-plugin/plugin.json` - Plugin metadata
 - `commands/` - Slash commands for user interaction
 - `agents/` - Specialized agents for specific tasks
+
+## Plugin Development
+
+Want to create your own Claude Code plugins? Check out [CLAUDE.md](CLAUDE.md) for a comprehensive guide covering:
+
+- Plugin design principles (safety, transparency, context-awareness)
+- Command design patterns (simple, multi-phase, agent-based)
+- Multi-phase workflow design with user confirmation
+- Agent design and coordination
+- User experience best practices
+- Safety patterns and error handling
+- Reporting and transparency strategies
+- Common patterns and anti-patterns to avoid
+
+The guide is based on real-world experience designing the plugins in this repository.
 
 ## Contributing
 
