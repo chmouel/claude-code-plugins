@@ -98,6 +98,45 @@ The plugin generates a structured report with:
 - Uses PR labels and descriptions for better categorization
 - Read-only operation - never modifies your code or git history
 
+### Jira Ticket
+
+Generate high-level Jira tickets from discussions, PRs, issues, files, or conversations with smart context gathering and validation.
+
+**What it supports**:
+
+- GitHub PR URLs and PR numbers
+- GitHub issue URLs and issue numbers
+- File paths (discussion notes, specs, etc.)
+- Git commit hashes and commit ranges
+- Current conversation context
+
+**Usage**:
+
+```
+/jira-ticket:jira-ticket https://github.com/owner/repo/pull/123
+/jira-ticket:jira-ticket 456                    # PR/issue number in current repo
+/jira-ticket:jira-ticket ./docs/discussion.md   # From file
+/jira-ticket:jira-ticket main..feature-branch   # From commits
+/jira-ticket:jira-ticket conversation            # From current chat
+```
+
+The plugin follows a 4-phase workflow:
+
+1. Context discovery and gathering from your reference
+2. Generate Jira issue with high-level context (no implementation details)
+3. Validation and preview with user confirmation
+4. Save to file with smart filename generation
+
+**Features**:
+
+- Anonymizes customer names automatically
+- Adds relevant links to PRs, issues, commits, and files
+- Validates required fields before saving
+- Jira-ready markdown formatting for copy-paste
+- Choose save location (/tmp or current directory)
+
+**Requirements**: GitHub CLI (`gh`) for PR/issue context, Git for commit context
+
 ## Installation
 
 Install this plugin collection from the shell:
@@ -112,6 +151,7 @@ To install specific plugins:
 claude plugin install bug-hunter
 claude plugin install deslop
 claude plugin install git-commit
+claude plugin install jira-ticket
 claude plugin install weekly-review
 ```
 
