@@ -93,6 +93,7 @@ The plugin generates a structured report with:
 - Links to merged PRs (GitHub mode) or commit timeline (git mode)
 
 **Features**:
+
 - Automatically detects GitHub CLI availability
 - Uses PR labels and descriptions for better categorization
 - Read-only operation - never modifies your code or git history

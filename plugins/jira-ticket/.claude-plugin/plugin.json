@@ -1,0 +1,9 @@
+{
+  "name": "jira-ticket",
+  "version": "1.0.0",
+  "description": "Generate Jira tickets from discussions, PRs, issues, or files",
+  "author": {
+    "name": "Claude Code Plugins",
+    "email": "plugins@claude.com"
+  }
+}

@@ -30,6 +30,13 @@
       "category": "development"
     },
     {
+      "name": "jira-ticket",
+      "description": "Generate Jira tickets from discussions, PRs, issues, or files with smart context gathering",
+      "version": "1.0.0",
+      "source": "./plugins/jira-ticket",
+      "category": "development"
+    },
+    {
       "name": "weekly-review",
       "description": "Generate a weekly summary of your git commits with insights on tech debt, bug fixes, and new features",
       "version": "1.0.0",
